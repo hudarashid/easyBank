@@ -1,0 +1,85 @@
+.hero {
+    background-color: $veryLightGray;
+
+    .container {
+        @include breakpoint-up(large) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    
+
+    &__img {
+        position: relative; //set this due to pseudo element position absolute
+        background-image: url('/images/bg-intro-mobile.svg'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 17.5rem; //for mobile versions
+
+        @include breakpoint-up(medium) {
+            min-height: 25rem;
+
+        }
+        @include breakpoint-up(large) {
+            min-height: 41rem;
+            flex: 3; //ratio bet hero img and hero text (3:2)
+            order: 2; //order bet. hero img and hero text
+            background-image: none;
+            //background-image: url('/images/bg-intro-desktop.svg');
+            //background-position: left center;
+        }
+        //&::before, &::after{
+            //border: 1px solid red;
+        //}
+
+        &::before {
+            @include breakpoint-up(large) {
+                content: "";//format for pseudo element
+                position: absolute;
+                width: 150%;
+                height: 100%;
+                background-image: url("/images/bg-intro-desktop.svg");
+                background-size: 112%;
+                background-repeat: no-repeat;
+                background-position: 0px 98%;
+            }
+        }
+
+        &::after {
+            content: "";//format for pseudo element
+            position: absolute; 
+            width: 100%;
+            height: 100%;
+            background-image: url('/images/image-mockups.png');//phone img
+            background-size: 91%;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+
+            @include breakpoint-up(medium){
+                background-size: 58%;
+            }
+
+            @include breakpoint-up(large) {
+                width: 110%;
+                height: 112%;
+                background-size: 94%;
+                background-position: center 144%;
+                left: 22%;
+            }
+        }
+        
+    }
+
+    &__text {
+        text-align: center; //align for the whole text .hero (mobile ver)
+
+        @include breakpoint-up(large) {
+            flex: 2; //ratio bet. hero img and hero text (3:2)
+            order: 1; //order bet. hero img and hero text
+            text-align: left;
+        }
+
+        
+    }
+}

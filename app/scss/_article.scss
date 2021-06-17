@@ -1,0 +1,71 @@
+.articles {
+    background-color: $veryLightGray;
+}
+
+.article {
+
+    &__content {
+
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr; // 1 column, fr-fractional unit-like auto 
+        gap: 1.875rem;
+        //grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr)); 
+
+        @include breakpoint-up(medium) {
+            grid-template-columns: repeat(2, 1fr);//2 column, 1fractional unit
+        }
+
+        @include breakpoint-up(large) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__item {
+        border-radius: 0.3125rem;
+        overflow: hidden; //to show the actual rounded corner for border radius
+        background-color: $white;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+        transition: all 150ms ease-in-out;//make smoother
+
+        &:hover {
+            transform: scale(1.03);//increase the size of item when mouse hover to it
+        }
+    }
+
+    &__image {
+        height: 12.5rem;
+        background-size: cover;//take up the entire div
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__text {
+        padding: 1.875rem 1.875rem 2.5rem 1.875rem;
+        color: $grayishBlue;
+
+        @include breakpoint-up(medium) {
+            padding: 1.875rem 1.5625rem; 
+        }
+
+    }
+
+    &__author {
+        font-size: 0.625rem;
+        margin-bottom: 0.75rem;
+    }
+
+    &__title {
+        font-size: 1.0625rem;
+        line-height: 1.2;
+        color: $darkBlue;
+        margin-bottom: 0.5rem;
+    }
+
+    &__description {
+        font-size: 0.8125rem;
+
+    }
+}
