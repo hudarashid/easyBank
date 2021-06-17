@@ -15,7 +15,7 @@ body {
     font-weight: 300;
     color: $grayishBlue;
     line-height: 1.3;
-    min-height: 400vh; //space height for the whole page
+    //min-height: 400vh; //space height for the whole page
     overflow-x: hidden; //prevent scrolling vertically
 
     @include breakpoint-up(large) {
