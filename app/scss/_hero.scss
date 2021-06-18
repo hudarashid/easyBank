@@ -11,7 +11,7 @@
 
     &__img {
         position: relative; //set this due to pseudo element position absolute
-        background-image: url('/images/bg-intro-mobile.svg'); 
+        background-image: url('images/bg-intro-mobile.svg'); 
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -26,7 +26,7 @@
             flex: 3; //ratio bet hero img and hero text (3:2)
             order: 2; //order bet. hero img and hero text
             background-image: none;
-            //background-image: url('/images/bg-intro-desktop.svg');
+            //background-image: url('images/bg-intro-desktop.svg');
             //background-position: left center;
         }
         //&::before, &::after{
@@ -39,7 +39,7 @@
                 position: absolute;
                 width: 150%;
                 height: 100%;
-                background-image: url("/images/bg-intro-desktop.svg");
+                background-image: url("images/bg-intro-desktop.svg");
                 background-size: 112%;
                 background-repeat: no-repeat;
                 background-position: 0px 98%;
@@ -51,7 +51,7 @@
             position: absolute; 
             width: 100%;
             height: 100%;
-            background-image: url('/images/image-mockups.png');//phone img
+            background-image: url('images/image-mockups.png');//phone img
             background-size: 91%;
             background-repeat: no-repeat;
             background-position: center bottom;
