@@ -1,6 +1,6 @@
 # Easybank landing page - Frontend Mentor Challenges
 
-Source : https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN/hub/easybank-landing-page-FTifEu2ie
+Source : https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN
 
 My first project using VS Code, and first time by using Git and Github
 
